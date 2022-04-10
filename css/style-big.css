@@ -6,8 +6,22 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+/* #header-background {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: url('../img/bg2.png');
+    background-attachment: fixed; 
+}*/
+
+/* 
+header {
+    background-image: url('img/bg.jpg');
+    margin-top: 20px;
+} */
+
 nav {
-    margin: 27px auto 0;
+    margin: 13px auto 0;
     position: relative;
     max-width: 90%;
     height: 50px;
@@ -27,9 +41,45 @@ nav a {
     text-transform: uppercase;
     text-align: center;
     color: black;
-    cursor: pointer;
 }
 
+.tw {
+    animation: canimation 3s linear infinite;
+}
+
+.tw1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+}
+
+.tw2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+}
+  
+.tw3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+}
+  
+.tw4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+}
+
+@keyframes canimation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
 
 nav .animation {
     position: absolute;
@@ -50,8 +100,14 @@ a:nth-child(3) {
 a:nth-child(4) {
     width: 160px;
 }
-a:nth-child(5) {
+/* a:nth-child(5) {
     width: 70px;
+} */
+a:nth-child(5) {
+    font-size: 22px;
+    margin-right: 20px;
+    float: right;
+    font-weight: 800;
 }
 
 /* a:not(:hover) {
@@ -78,11 +134,11 @@ nav .start-aboutUs, a:nth-child(4):hover~.animation {
     left: 375px;
     background-color: #9b59b6;
 }
-nav .start-contact, a:nth-child(5):hover~.animation {
+/* nav .start-contact, a:nth-child(5):hover~.animation {
     width: 100px;
     left: 490px;
     background-color: #e67e22;
-}
+} */
 
 #container-articole{
     display: flex;
@@ -92,8 +148,8 @@ nav .start-contact, a:nth-child(5):hover~.animation {
     display: grid;
     grid-template-areas: 
             "home home home home"
-            "posts posts posts posts"
-            "posts posts posts posts"
+            "noutati noutati content content"
+            "noutati noutati content content"
             "galery galery galery galery";
     grid-gap: 15px 15px;
 }
@@ -114,33 +170,74 @@ nav .start-contact, a:nth-child(5):hover~.animation {
 }
 
 #noutati{
+    grid-area: noutati;
     margin-top: 15px;
     margin-left: 50px;
 }
 
-/* preview for the first article */
-#noutati > #container-articole > article:nth-of-type(1) > img {
-    margin-right: 20px;
-    float: left;
-}
-#noutati > #container-articole > article:nth-of-type(1) > h3 {
-    margin-right: 20px;
-    float: left;
-}
-#noutati > #container-articole > article:nth-of-type(1) > p {
-    margin-right: 20px;
+/* #review ul{
     margin-top: 30px;
+    list-style: none;
+} */
+
+/* STAR */
+.review-star{
+    color: lightgreen;
+    margin-top: 5px;
 }
 
-/* preview for the second article */
-#noutati > #container-articole > article:nth-of-type(2) > img {
+.review-star p{
+    color: black;
+}
+
+.review-star span{
+    color: orangered;
+}
+/* STAR */
+
+/* REVIEW TABLE */
+table{
+    margin-top: 30px;
+    border-collapse: collapse;
+    /* width: 100%; */
+}
+
+td{
+    border: 1px solid lightcoral;
+    text-align: left;
+    padding: 6px;
+}
+
+tr:nth-child(even) {
+    background-color: lightcoral;
+}
+/* REVIEW TABLE */
+
+/* preview for the first article */
+#noutati > #container-articole > article:nth-of-type(2n+1) > img {
     margin-right: 20px;
     float: left;
 }
-#noutati > #container-articole > article:nth-of-type(2) > h3 {
+#noutati > #container-articole > article:nth-of-type(2n+1) > h3 {
+    margin-right: 20px;
     float: left;
 }
-#noutati > #container-articole > article:nth-of-type(2) > p {
+#noutati > #container-articole > article:nth-of-type(2n+1) > p {
+    margin-right: 20px;
+    margin-top: 25px;
+}
+/* preview for the first article */
+
+/* preview for the second article */
+#noutati > #container-articole > article:nth-of-type(2n+2) > img {
+    margin-right: 20px;
+    float: left;
+}
+#noutati > #container-articole > article:nth-of-type(2n+2) > h3 {
+    float: left;
+}
+#noutati > #container-articole > article:nth-of-type(2n+2) > p {
     margin-right: 20px;
     margin-top: 30px;
 }
+/* preview for the second article */
