@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+    margin: 27px auto 0;
+    position: relative;
+    max-width: 90%;
+    height: 50px;
+    background-color: #F5F5F8;
+    border-radius: 8px;
+    font-size: 0;
+}
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+}
+
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    transition: 0.5s;
+    border-radius: 8px;
+}
+a:nth-child(1) {
+    width: 100px;
+}
+a:nth-child(2) {
+    width: 150px;
+}
+a:nth-child(3) {
+    width: 100px;
+}
+a:nth-child(4) {
+    width: 160px;
+}
+a:nth-child(5) {
+    width: 70px;
+}
+
+/* a:not(:hover) {
+    background-color: aqua;
+} */
+
+nav .start-home, a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #1abc9c;
+}
+nav .start-latestPosts, a:nth-child(2):hover~.animation {
+    width: 134px;
+    left: 100px;
+    background-color: #e74c3c;
+}
+nav .start-restaurants, a:nth-child(3):hover~.animation {
+    width: 134px;
+    left: 240px;
+    background-color: #3498db;
+}
+nav .start-aboutUs, a:nth-child(4):hover~.animation {
+    width: 110px;
+    left: 375px;
+    background-color: #9b59b6;
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+    width: 100px;
+    left: 490px;
+    background-color: #e67e22;
+}
+
+#container-articole{
+    display: flex;
+}
+
+#container-pagina{
+    display: grid;
+    grid-template-areas: 
+            "home home home home"
+            "posts posts posts posts"
+            "posts posts posts posts"
+            "galery galery galery galery";
+    grid-gap: 15px 15px;
+}
+
+#home {
+    grid-area: home;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+#home > p {
+    margin-top: 10px;
+    margin-right: 70px;
+}
+
+#noutati h2 {
+    margin-bottom: 15px;
+}
+
+#noutati{
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+/* preview for the first article */
+#noutati > #container-articole > article:nth-of-type(1) > img {
+    margin-right: 20px;
+    float: left;
+}
+#noutati > #container-articole > article:nth-of-type(1) > h3 {
+    margin-right: 20px;
+    float: left;
+}
+#noutati > #container-articole > article:nth-of-type(1) > p {
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+/* preview for the second article */
+#noutati > #container-articole > article:nth-of-type(2) > img {
+    margin-right: 20px;
+    float: left;
+}
+#noutati > #container-articole > article:nth-of-type(2) > h3 {
+    float: left;
+}
+#noutati > #container-articole > article:nth-of-type(2) > p {
+    margin-right: 20px;
+    margin-top: 30px;
+}
