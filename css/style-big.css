@@ -339,3 +339,34 @@ td:nth-child(odd) {
     margin-top: 30px;
 }
 /* preview for the second article */
+
+/* fix for new posts content */
+@media screen and (max-width: 1180px) {
+    #container-articole{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #testimonials .tests-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* preview for the second article */
+    #noutati > #container-articole > article:nth-of-type(2n+2){
+        margin-top: 20px;
+    }
+
+    #noutati > #container-articole p {
+        word-wrap: break-word;
+    }
+
+    /* preview for the second article */
+
+}
+/* fix for site name appearance in the navbar*/
+@media screen and (max-width: 903px) {
+    nav a:nth-child(5){
+        display: none;
+    }
+}
