@@ -6,6 +6,10 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+h2{
+    font-size: 32px;
+}
+
 /* #header-background {
     height: 100px;
     line-height: 100px;
@@ -148,10 +152,104 @@ nav .start-aboutUs, a:nth-child(4):hover~.animation {
     display: grid;
     grid-template-areas: 
             "home home home home"
-            "noutati noutati content content"
-            "noutati noutati content content"
-            "galery galery galery galery";
+            "noutati noutati noutati noutati"
+            "testimonials testimonials testimonials testimonials"
+            "social-media social-media social-media social-media";
     grid-gap: 15px 15px;
+}
+
+#social-media{
+    grid-area: social-media;
+}
+
+#social-media h2{
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+#testimonials {
+    grid-area: testimonials;
+}
+
+#testimonials .tests-container{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 368px;
+    grid-column-gap: 28px;
+    overflow-x: auto;
+    margin: 16px 0;
+    max-width: 100%;
+    justify-content: center;
+}
+
+#testimonials h2{
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+#testimonials .tests-container article{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    margin: 4px;
+    padding-bottom: 63px;
+    margin-top: 40px;
+    overflow-x: auto;
+    
+}
+
+#testimonials .tests-container article > p{
+    font-style: italic;
+    padding: 0 32px;
+    margin: 0;
+}
+
+#testimonials .tests-container article > cite {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 700;
+    padding: 8px 32px 32px;
+    position: absolute;
+    display: block;
+}
+
+#testimonials .tests-container article img {
+    padding: 8px;
+}
+
+#testimonials .tests-container .test1 > cite::before {
+    background-image: url('../img/flavian.jpg');
+    background-size: 40px 40px;
+    border-radius: 50%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    content: "  ";
+}
+
+#testimonials .tests-container .test2 > cite::before {
+    background-image: url('../img/pham.jpg');
+    background-size: 40px 40px;
+    border-radius: 50%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    content: "  ";
+}
+
+#testimonials .tests-container .test3 > cite::before {
+    background-image: url('../img/tobi.jpg');
+    background-size: 40px 40px;
+    border-radius: 50%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    content: "  ";
 }
 
 #home {
@@ -174,11 +272,6 @@ nav .start-aboutUs, a:nth-child(4):hover~.animation {
     margin-top: 15px;
     margin-left: 50px;
 }
-
-/* #review ul{
-    margin-top: 30px;
-    list-style: none;
-} */
 
 /* STAR */
 .review-star{
@@ -203,14 +296,19 @@ table{
 }
 
 td{
-    border: 1px solid lightcoral;
+    border: 1px solid gainsboro;
     text-align: left;
     padding: 6px;
 }
 
-tr:nth-child(even) {
+td:nth-child(even) {
     background-color: lightcoral;
 }
+
+td:nth-child(odd) {
+    background-color: lightgreen;
+}
+
 /* REVIEW TABLE */
 
 /* preview for the first article */
