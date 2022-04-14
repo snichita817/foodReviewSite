@@ -6,6 +6,22 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+
+/* STAR */
+.review-star{
+    color: lightgreen;
+    margin-top: 5px;
+}
+
+.review-star p{
+    color: black;
+}
+
+.review-star span{
+    color: orangered;
+}
+/* STAR */
+
 a {
     text-decoration: none;
     color: black;
