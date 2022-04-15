@@ -192,6 +192,11 @@ nav .start-aboutUs, a:nth-child(4):hover~.animation {
     opacity: 0.7;
 }
 
+.links {
+    list-style: none;
+    display: flex;
+}
+
 @media screen and (max-width: 903px) {
     nav a:nth-child(5){
         display: none;

@@ -431,6 +431,11 @@ td:nth-child(odd) {
     animation-delay: 4.5s;
 }
 
+.links {
+    list-style: none;
+    display: flex;
+}
+
 @keyframes aparitie{
     0% {
         /* opacity: 0; */

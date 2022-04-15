@@ -227,6 +227,11 @@ footer{
     height: 30px;
 }
 
+.links {
+    list-style: none;
+    display: flex;
+}
+
 #social-media .social-media-text img:hover{
     opacity: 0.7;
 }
